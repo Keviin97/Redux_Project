@@ -8,8 +8,8 @@ class Home extends Component {
     return (
       <HomeLayout>
         <NavBar />
-        <PostContainer>
-        </PostContainer>
+        {/* <PostContainer>
+        </PostContainer> */}
       </HomeLayout>
     );
   }

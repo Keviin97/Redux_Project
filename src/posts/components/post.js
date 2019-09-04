@@ -11,7 +11,7 @@ const Post = (props) => (
               <div className="row">
                 <div className="col-9">
                   <img src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-perfil-de-usuario-icono-azul-by-vexels.png" width="25" height="25" className="rounded-circle d-inline-block align-top" alt="" />
-                  <a href="#" className="text-dark"><h5 className="card-title d-inline-block align-middle">Kevin Gómez</h5></a>
+                  <a href="#" className="text-dark"><h5 className="card-title d-inline-block align-middle">{props.user.first_name +' '+ props.user.last_name}</h5></a>
                 </div>
                 <div className="col-3">
                   <div className="text-right">
@@ -29,18 +29,18 @@ const Post = (props) => (
                 </div>
               </div>
               <div>
-                <small className="card-subtitle text-muted text-right mb-2">Publicado el: 02/09/2019</small>
+                <small className="card-subtitle text-muted text-right mb-2">Publicado el: {props.created_date}</small>
               </div>
             </div>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">{props.text}</p>
             <hr />
             <div className="row">
               <div className="col-4">
-                <a href="#" className="btn btn-outline-primary btn-sm btn-block">1 <i className="fas fa-thumbs-up"></i></a>
+                <a href="#" className="btn btn-outline-primary btn-sm btn-block">{props.likes} <i className="fas fa-thumbs-up"></i></a>
               </div>
               <div className="col-4">
                 <a href=""></a>
-                <button type="button" className="btn btn-outline-danger btn-sm btn-block">2 <i className="fas fa-thumbs-down"></i></button>
+                <button type="button" className="btn btn-outline-danger btn-sm btn-block">{props.unlikes} <i className="fas fa-thumbs-down"></i></button>
               </div>
               <div className="col-4">
                 <a href="#" className="btn btn-outline-success btn-sm btn-block">Comentar</a>

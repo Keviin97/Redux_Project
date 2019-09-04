@@ -1,4 +1,5 @@
 import React from 'react';
+import face from '../../images/face.png';
 
 const navStyle = {
   backgroundColor: '#3C5C9C',
@@ -10,7 +11,7 @@ const NavBar = props =>
     <nav className="navbar navbar-expand-lg navbar-dark text-white" style={navStyle}>
       <div className="container text-white">
         <a className="navbar-brand" href="#">
-            <img src="https://cdn.icon-icons.com/icons2/1099/PNG/512/1485482214-facebook_78681.png" width={27} height={27} className="d-inline-block align-top" alt=""/>
+            <img src={face} width={27} height={27} className="d-inline-block align-top" alt=""/>
         </a>                
         <div className="text-right">
           <div className="collapse navbar-collapse" id="navbarNav">

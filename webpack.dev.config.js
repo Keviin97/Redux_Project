@@ -9,9 +9,10 @@ module.exports = {
     filename: 'js/[name].js'
   },
   devServer: {
+    historyApiFallback: true,
     port: 9000,
     proxy: [{
-      path: '/post',
+      path: '/api',
       target: 'http://localhost:8000/',
       secure: false,
       changeOrigin: true,

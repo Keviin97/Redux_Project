@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../../images/user.png'
 
 const Post = (props) => (
   <div className="container">
@@ -10,7 +11,7 @@ const Post = (props) => (
             <div className="mb-1">
               <div className="row">
                 <div className="col-9">
-                  <img src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-perfil-de-usuario-icono-azul-by-vexels.png" width="25" height="25" className="rounded-circle d-inline-block align-top" alt="" />
+                  <img src={profileImage} width="25" height="25" className="rounded-circle d-inline-block align-top" alt="" />
                   <a href="#" className="text-dark"><h5 className="card-title d-inline-block align-middle">{props.user.first_name +' '+ props.user.last_name}</h5></a>
                 </div>
                 <div className="col-3">

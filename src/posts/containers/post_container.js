@@ -18,14 +18,14 @@ class PostContainer extends Component {
   render() {
     const posts = this.props.listado
 
-    console.log('Array vacio: ' + (Object.entries(posts).length === 0))
-    console.log('--------------------------------------------------')
+    // console.log('Array vacio: ' + (Object.entries(posts).length === 0))
+    // console.log('--------------------------------------------------')
 
     if (Object.entries(posts).length === 0) {
       return <h1>No hay posts</h1>
     }
     else{
-      console.log("aaaaaaaaa",posts.results)
+      // console.log("aaaaaaaaa",posts.results)
 
       return(
         <div>
@@ -36,6 +36,7 @@ class PostContainer extends Component {
               </Post>
             })
           }
+        <h1>--------------------------------------------------</h1>
         </div>
       )
     }
@@ -43,8 +44,8 @@ class PostContainer extends Component {
 }
 
 function mapStateToProps(state, props) {
-  console.log('STATE PROPS')
-  console.log(state.posts);
+  // console.log('STATE PROPS')
+  // console.log(state.posts);
   return {
     listado: state.posts
   }

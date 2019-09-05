@@ -4,7 +4,7 @@ import reducers from './post';
 
 const rootReducer = combineReducers({
   form: formReducer,
-  reducers,
+  reducers
 })
 
 export default rootReducer;

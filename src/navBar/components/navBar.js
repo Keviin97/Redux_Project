@@ -2,8 +2,8 @@ import React from 'react';
 import face from '../../images/face.png';
 import profileImage from '../../images/user.png';
 import {BrowserRouter, Route, NavLink, Link} from 'react-router-dom';
-import newPost from '../../posts/components/new_post';
 import PostContainer from '../../posts/containers/post_container';
+import newPostContainer from '../../posts/containers/new_post_container';
 
 
 const navStyle = {
@@ -74,7 +74,7 @@ const NavBar = props =>
 
 
     <Route path="/" exact component={PostContainer} />
-    <Route path="/new_post/" component={newPost} />
+    <Route path="/new_post/" component={newPostContainer} />
   </BrowserRouter>
 )
 export default NavBar;

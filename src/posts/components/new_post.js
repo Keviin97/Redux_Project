@@ -1,28 +1,22 @@
 import React from 'react';
+import {Field, reduxForm} from 'redux-form';
 
-const newPost = (props) => (
-  <div className="container">
-    <div className="row mt-3">
-      <div className="col-md-2"></div>
-      <div className="col-md-8">
-      <div className="card">
-        <div className="card-body">
-          <h3 className="card-title text-center">Nueva Publicación</h3>
-          <hr/>
-          <form>
-            <div className="form-group">
-              <textarea className="form-control" id="publication" name="publication" rows="5"></textarea>
-            </div>
-          </form>
-          <div className="text-right">
-            <a href="#" className="btn btn-primary btn-lg">Publicar</a>
-          </div>
-        </div>
+let newPost = (props) => {
+  const { handleSubmit } = props
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <Field name="text" required className="form-control" component="textarea" rows="5"/>
       </div>
+      <div className="text-right">
+        <button type="submit" className="btn btn-primary btn-lg">Publicar</button>
       </div>
-      <div className="col-md-2"></div>
-    </div>
-  </div>
-)
+    </form>
+  )
+}
+
+newPost = reduxForm({
+  form: 'newPublication'
+})(newPost)
 
 export default newPost;

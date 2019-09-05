@@ -13,6 +13,7 @@ import * as postsActions from "../../../redux/actions/postActions";
 class PostContainer extends Component {
   componentDidMount(){
     this.props.actions.listPosts()
+    // console.log(this.props.actions.listPosts())
   }
 
   render() {
@@ -36,7 +37,7 @@ class PostContainer extends Component {
               </Post>
             })
           }
-        <h1>--------------------------------------------------</h1>
+        {/* <h1>--------------------------------------------------</h1> */}
         </div>
       )
     }
@@ -44,10 +45,8 @@ class PostContainer extends Component {
 }
 
 function mapStateToProps(state, props) {
-  // console.log('STATE PROPS')
-  // console.log(state.posts);
   return {
-    listado: state.posts
+    listado: state.reducers.posts
   }
 }
 

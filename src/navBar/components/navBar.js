@@ -1,7 +1,7 @@
 import React from 'react';
 import face from '../../images/face.png';
 import profileImage from '../../images/user.png';
-import {BrowserRouter, Route, NavLink} from 'react-router-dom';
+import {BrowserRouter, Route, NavLink, Link} from 'react-router-dom';
 import newPost from '../../posts/components/new_post';
 import PostContainer from '../../posts/containers/post_container';
 
@@ -62,7 +62,7 @@ const NavBar = props =>
                     </NavLink>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <h6 className="dropdown-header">Kevin Gómez</h6>
-                      <NavLink className="dropdown-item" to="/"><small>Cerrar sesion</small></NavLink>
+                      <Link className="dropdown-item" to="/"><small>Cerrar sesion</small></Link>
                     </div>
                 </li>
               </ul>
